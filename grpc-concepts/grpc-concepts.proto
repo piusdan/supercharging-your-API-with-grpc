@@ -1,0 +1,24 @@
+syntax = "proto3";
+package pyconke.example.tutorial;
+
+service HelloService {
+    // unary 
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+    // server streaming
+    rpc LotsOfReplies(HelloRequest) returns (stream HelloResponse){
+    }
+    // client streaming
+    rpc LotsOfGreetings(stream HelloRequest) returns (HelloResponse) {
+    }
+    // bidirectional streamin
+    rpc BidiHello(stream HelloRequest) returns (stream HelloResponse){
+    }
+  }
+  
+  message HelloRequest {
+    string greeting = 1;
+  }
+  
+  message HelloResponse {
+    string reply = 1;
+  }
