@@ -4,7 +4,8 @@ import ssl_grpc_pb2_grpc, ssl_grpc_pb2
 
 def say_hello(stub):
     greeting = ssl_grpc_pb2.HelloRequest(greeting="Hello")
-    resp = stub.SayHello(greeting)
+    metadata = [('api-key', 'my api key'),]
+    resp = stub.SayHello(greeting, metadata=metadata)
     print(resp)
 
 

@@ -12,6 +12,8 @@ class HelloWorldServicer(ssl_grpc_pb2_grpc.HelloServiceServicer):
     """Provide method functionalities for the hellowrold server"""
 
     def SayHello(self, request, context):
+        metadata = context.invocation_metadata()
+        print('metadata: {}'.format(metadata))
         print(request)
         print("received: {}".format(request))
         return ssl_grpc_pb2.HelloResponse(reply="{} to you".format(request.greeting))
