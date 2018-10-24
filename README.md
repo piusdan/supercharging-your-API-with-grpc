@@ -28,3 +28,32 @@ $ pip install googleapis-common-protos
 ```bash
 $ python -m grpc_tools.protoc -I $SRC_dIR --python_out=$DEST_DIR --grpc_python_out=. $SRC_DIR/$proto_file
 ```
+
+### working with examples
+
+1. Generate stubs
+```bash 
+$ make stubs
+```
+
+2. Start client
+```bash
+$ make client
+```
+
+3. Start server
+```bash
+$ make server
+```
+
+4. Generate ssl certs
+```bash
+$ make gen_key
+```
+
+###### References
+
+[gRPC documentation](https://grpc.io/docs/quickstart/python.html)
+[Authetication](https://grpc.io/docs/guides/auth.html#python)
+[Using SSL](https://www.sandtable.com/using-ssl-with-grpc-in-python)
+LoadBalancing [gRPC blog](https://grpc.io/blog/)
