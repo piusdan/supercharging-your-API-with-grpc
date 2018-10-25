@@ -54,6 +54,9 @@ $ make gen_key
 ###### References
 
 [gRPC documentation](https://grpc.io/docs/quickstart/python.html)
+
 [Authetication](https://grpc.io/docs/guides/auth.html#python)
+
 [Using SSL](https://www.sandtable.com/using-ssl-with-grpc-in-python)
+
 LoadBalancing [gRPC blog](https://grpc.io/blog/)
